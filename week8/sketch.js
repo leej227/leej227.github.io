@@ -7,7 +7,7 @@ function setup() {
   button = select('#enter-text');
   textArea = select('#input');
 
-  textArea.value("In Data Poetics, we build upon our skills developed in Code 1 by moving beyond the image. We will take a closer look at the capacity of computers to process, interpret, visualize, and generate information, while studying everything from avant garde computational literature to the sociocultural implications of contemporary big data. Through our study of the applications of regular expressions, Markov chains, web scraping, data visualization, and semantic networks, we’ll write client and server-side Javascript, creating browser extensions, Twitter bots, and our own custom APIs, drawing from speculative and critical design to investigate the connections between culture, technology, and information.");
+  textArea.value("Enter text here");
 
   button.mousePressed(createConcordance);
 }
