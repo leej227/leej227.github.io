@@ -79,5 +79,6 @@ if (textArr[i] === "Is" || textArr[i] === "is") {
 
   // join the array into a single string, separated by spaces
   var newString = join(textArr, ' ');
-  createP(newString);
+  var newp = createP(newString);
+  newp.style('color', 'red'); 
 }
