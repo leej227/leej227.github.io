@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Markov 1</title>
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+
+    <script src="sketch.js" type="text/javascript"></script>
+    <script src="markovword.js" type="text/javascript"></script>
+
+    <style>
+      body {
+        padding: 20px;
+      }
+
+      .markov {
+        padding: 16px;
+        background-color: #EEE;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <h1>DR. SEUSS TEXT GENERATOR</h1>
+
+    <p>This page demonstrates generating text from a Markov chain using <i>One Fish, Two Fish, Red Fish, Blue Fish</i> and <i>Green Eggs and Ham</i> by Dr. Seuss. Code by Daniel Shiffman</a>.</p> 
+    <p><img src="https://s-media-cache-ak0.pinimg.com/564x/85/85/81/85858107f8871857c155bf9ccbdb304e.jpg" alt="some_text" style="width:281px;height:281px;"><img src="http://www.cameronparkzoo.com/wp-content/uploads/2011/05/FISH-3-300x203.png" style="width:width;height:height;"> </p>
+
+    <p>
+      Input text:<br/>
+      <textarea id="text" cols="100" rows="10">
+One fish Two fish Red fish Blue fish. Black fish Blue fish Old fish New fish. This one has a little star. This one has a little car. Say! What a lot Of fish there are. Yes. Some are red. And some are blue. Some are old. And some are new. Some are sad. And some are glad. And some are very, very bad. Why are they Sad and glad and bad? I do not know. Go ask your dad. Some are thin. And some are fat. The fat one has A yellow hat. From there to here, from here to there, Funny things Are everywhere.  Here are some Who like to run. They run for fun In the hot, hot sun. Oh me! Oh my! Oh me! Oh my! What a lot Of funny things go by. Some have two feet And some have four. Some have six feet And some have more. Where do they come from? I can’t say. But I bet they have come a long, long way. We see them come. We see them go. Some are fast. And some are slow. Some are high And some are low. Not one of them Is like another. Don’t ask us why. Go ask your mother. Say! Look at his fingers! One, two, three… How many fingers Do I see? One, two, three, four, Five, six, seven, Eight, nine, ten. He has eleven! Eleven! This is something new. I wish I had Eleven, too! 
+
+i am sam. i am sam. sam i am.
+
+that sam-i-am! that sam-i-am! i do not like that sam-i-am!
+
+do would you like green eggs and ham?
+
+i do not like them,sam-i-am.
+i do not like green eggs and ham.
+
+would you like them here or there?
+
+i would not like them here or there.
+i would not like them anywhere.
+i do not like green eggs and ham.
+i do not like them, sam-i-am.
+
+would you like them in a house?
+would you like then with a mouse?
+
+i do not like them in a house.
+i do not like them with a mouse.
+i do not like them here or there.
+i do not like them anywhere.
+i do not like green eggs and ham.
+i do not like them, sam-i-am.
+
+would you eat them in a box?
+would you eat them with a fox?
+
+not in a box. not with a fox.
+not in a house. not with a mouse.
+i would not eat them here or there.
+i would not eat them anywhere.
+i would not eat green eggs and ham.
+i do not like them, sam-i-am.
+
+i do so like green eggs and ham!
+thank you! thank you, sam i am.
+</textarea>
+    </p>
+
+    <p>
+      order: 
+      <select id = "order">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </p>
+
+    <p>
+      length: <input type="text" size="5" id="length" value="500"></input>
+    </p>
+
+    <p>
+      <button id="generate">generate</button>
+      <button id="clear">clear</button>
+    </p>
+
+    <p id ="results"></p>
+  </body>
+</html>
+
